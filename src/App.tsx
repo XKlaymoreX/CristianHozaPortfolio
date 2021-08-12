@@ -1,24 +1,38 @@
+import './Home.css';
+import BackgroundDetail from './Components/BackgroundDetail';
+import { useEffect } from 'react';
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+gsap.registerPlugin(ScrollTrigger)
 
-function App() {
+const App = () => {
+
+  useEffect(() => {
+
+
+  }, [])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Home">
+      <div className="landingSection ">
+
+        {/* IMAGE THUMBNAIL */}
+        <div className="profileImageThumbnail centered">
+          <div className="profileImage"></div>
+          <div className="profileImageFlag">🇨🇭</div>
+        </div>
+
+        <p>HI THERE 👋🏻 I'M</p>
+        <span>Cristian Hoza</span>
+        <div className="myProfession">full stack developer & <br /> web design enthusiast</div>
+        <div className="myProfessionDetailed">I’m a specialist Full Stack Developer<br/>
+          with growing UI/UX Skills,<br/>
+          based in Switzerland.
+        </div>
+        <div className="callToAction centered">take a look</div>
+      </div>
     </div>
   );
 }
