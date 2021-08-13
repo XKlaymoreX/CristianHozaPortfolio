@@ -121,6 +121,19 @@
     transition: .3s;
 }
 
+.lightModeSwitch {
+    height: 40px;
+    background-color: #393D3F;
+    width: 70px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
 
 /*NIGHT MODE PHONE*/
 
@@ -199,4 +212,52 @@
     background-color: #FFC857;
     -webkit-box-shadow: 0px 10px 19px 1px #FFC857;
     box-shadow: 0px 10px 19px 1px #FFC857;
+}
+
+.lightModeSwitchNM {
+    height: 40px;
+    background-color: #ffffff;
+    width: 70px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.moonSun {
+    margin-left: 4px;
+}
+
+.majorMoonSunCircle {
+    opacity: 100;
+    fill: #F0D85A;
+}
+
+.majorMoonSunCircleNM {
+    opacity: 100;
+    fill: #393D3F;
+}
+
+.minorMoonSunCircle {
+    opacity: 100;
+    transition: .5s;
+}
+
+.minorMoonSunCircleNM {
+    opacity: 0;
+    transition: .5s;
+}
+
+.moon {
+    opacity: 0;
+    transition: .5s;
+}
+
+.moonNM {
+    opacity: 100;
+    transition: .5s;
+    border: 1px solid #F0D85A;
 }

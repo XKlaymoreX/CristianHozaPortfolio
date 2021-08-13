@@ -3,6 +3,7 @@ import { useEffect,useState } from 'react';
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import React from 'react';
+import MoonSun from './Shared/Svgs/MoonSun'
 gsap.registerPlugin(ScrollTrigger)
 
 const App = () => {
@@ -18,10 +19,25 @@ const App = () => {
 
 
   const lightModeSwitchAnimationTrigger = () => {
+    
+    setNightMode(!isNightModeOn);
     gsap.fromTo('.landingSection' , {
       opacity:0
     }, {opacity:1, duration:.8})
+
+    if(isNightModeOn){
+      gsap.to(".moonSun",{
+        translateX:parseFloat(gsap.getProperty(".moonSun","x").toString()) -25
+      })
+    }else{
+      gsap.to(".moonSun",{
+        translateX: parseFloat(gsap.getProperty(".moonSun","x").toString()) +25
+      })
+    }
+    
   }
+
+  
 
   
 
@@ -41,10 +57,10 @@ const App = () => {
           with growing UI/UX Skills,<br/>
           based in Switzerland.
         </div>
-        <div className={`centered ${isNightModeOn ? "callToActionNM" : "callToAction"}`}>check my work</div>
-
-        <input type="checkbox" style={{cursor:'pointer'}} onClick={() => {setNightMode(!isNightModeOn); lightModeSwitchAnimationTrigger()}}></input>
-        {isNightModeOn ? <div>Night Mode On</div> : <div>Night Mode Off</div>}
+        <div className={`centered ${isNightModeOn ? "callToActionNM" : "callToAction"}`}>check my skills</div>
+        <div className={isNightModeOn ? "lightModeSwitchNM" : "lightModeSwitch"} onClick={() => lightModeSwitchAnimationTrigger()}>
+        <MoonSun isNight={isNightModeOn} className={"moonSun"}/>
+        </div>
       </div>
     </div>
   );
