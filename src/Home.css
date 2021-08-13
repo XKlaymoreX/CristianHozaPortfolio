@@ -96,8 +96,10 @@
     font-weight: bold;
     cursor: pointer;
     user-select: none;
-    transition: .1s;
     -webkit-transition: .1s;
+    -o-transition: .1s;
+    -moz-transition: .1s;
+    transition: .1s;
 }
 
 .callToAction:hover {
@@ -105,8 +107,10 @@
     color: #468C9D;
     border: 2px solid #468C9D;
     transform: scale(1.2);
-    transition: .3s;
-    -webkit-transition: .3s;
     -webkit-box-shadow: 0px 0px 19px 2px #46a1c7;
     box-shadow: 0px 0px 19px 2px #46a1c7;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    -moz-transition: .3s;
+    transition: .3s;
 }
