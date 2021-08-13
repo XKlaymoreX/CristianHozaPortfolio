@@ -54,6 +54,9 @@
     user-select: none;
 }
 
+
+/*TEXT*/
+
 .landingSection>p {
     margin-top: 70px;
 }
@@ -81,6 +84,9 @@
     color: #393D3F;
     margin-top: 30px;
 }
+
+
+/*BUTTON*/
 
 .callToAction {
     background-color: #468C9D;
@@ -113,4 +119,84 @@
     -o-transition: .3s;
     -moz-transition: .3s;
     transition: .3s;
+}
+
+
+/*NIGHT MODE PHONE*/
+
+.HomeNM {
+    text-align: center;
+    margin: auto;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    width: 100%;
+    background-color: #393D3F;
+}
+
+.callToActionNM {
+    background-color: #393D3F;
+    width: 190px;
+    height: 35px;
+    color: #FFC857;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    -webkit-transition: .1s;
+    -o-transition: .1s;
+    -moz-transition: .1s;
+    transition: .1s;
+    border: 2px solid #FFC857;
+}
+
+.callToActionNM:hover {
+    background-color: white;
+    color: #FFC857;
+    border: 2px solid #FFC857;
+    transform: scale(1.2);
+    -webkit-box-shadow: 0px 0px 19px 2px #FFC857;
+    box-shadow: 0px 0px 19px 2px #FFC857;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    -moz-transition: .3s;
+    transition: .3s;
+    background-color: #393D3F;
+}
+
+.myProfessionNM {
+    text-transform: uppercase;
+    font-style: italic;
+    color: #FFC857;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #FFC857;
+    font-size: 18px;
+    margin-top: 15px;
+    line-height: 30px;
+}
+
+.myProfessionDetailedNM {
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+.profileImageNM {
+    width: 220px;
+    height: 220px;
+    border-radius: 100%;
+    background-image: url(../src/Shared/Media/memojiiAppleCris.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    /*border: 6px solid #468C9D;*/
+    background-size: 230px 240px;
+    background-color: #FFC857;
+    -webkit-box-shadow: 0px 10px 19px 1px #FFC857;
+    box-shadow: 0px 10px 19px 1px #FFC857;
 }
