@@ -10,20 +10,24 @@ const App = () => {
 
   useEffect(() => {
 
+    gsap.fromTo('.landingSection' , {
+      opacity:0
+    }, {opacity:1, duration:.8})
+
+
 
   }, [])
 
 
   return (
     <div className="Home">
-      <div className="landingSection ">
+      <div className="landingSection">
 
         {/* IMAGE THUMBNAIL */}
         <div className="profileImageThumbnail centered">
           <div className="profileImage"></div>
           <div className="profileImageFlag">🇨🇭</div>
         </div>
-
         <p>HI THERE 👋🏻 I'M</p>
         <span>Cristian Hoza</span>
         <div className="myProfession">full stack developer & <br /> web design enthusiast</div>
@@ -31,7 +35,7 @@ const App = () => {
           with growing UI/UX Skills,<br/>
           based in Switzerland.
         </div>
-        <div className="callToAction centered">take a look</div>
+        <div className="callToAction centered">check my work</div>
       </div>
     </div>
   );
