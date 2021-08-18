@@ -4,8 +4,8 @@ const MoonSun : React.FC<{isNight: boolean, className:string}> = ({isNight,class
   return (
     <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="35"
-    height="35"
+    width="25"
+    height="25"
     fill="none"
     viewBox="0 0 389 390"
     className={className}

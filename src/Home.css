@@ -8,17 +8,18 @@
 
 .Home {
     text-align: center;
-    margin: auto;
-    color: #393D3F;
-    font-family: Arial, Helvetica, sans-serif;
-    height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     width: 100%;
+    min-height: 820px;
+    display: flex;
+    flex-flow: column;
 }
 
 .landingSection {
     width: 100%;
-    height: 820px;
-    position: absolute;
+    height: auto;
+    min-height: 820px;
+    color: #393D3F;
 }
 
 
@@ -65,6 +66,7 @@
     font-style: italic;
     font-weight: bold;
     font-size: 48px;
+    margin-top: 10px;
 }
 
 .myProfession {
@@ -74,7 +76,7 @@
     font-weight: bolder;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #38809E;
-    font-size: 18px;
+    font-size: 22px;
     margin-top: 15px;
     line-height: 30px;
 }
@@ -122,9 +124,9 @@
 }
 
 .lightModeSwitch {
-    height: 40px;
+    height: 30px;
     background-color: #393D3F;
-    width: 70px;
+    width: 55px;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -137,21 +139,29 @@
 
 /*NIGHT MODE PHONE*/
 
-.HomeNM {
-    text-align: center;
-    margin: auto;
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    height: 100vh;
+.landingSectionNM {
     width: 100%;
+    height: 100vh;
+    min-height: 820px;
+    color: #ffffff;
     background-color: #393D3F;
 }
 
+.landingSectionNM>p {
+    margin-top: 70px;
+}
+
+.landingSectionNM>span {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 48px;
+}
+
 .callToActionNM {
-    background-color: #393D3F;
+    background-color: #FFC857;
     width: 190px;
     height: 35px;
-    color: #FFC857;
+    color: #393D3F;
     margin-top: 30px;
     display: flex;
     justify-content: center;
@@ -215,9 +225,9 @@
 }
 
 .lightModeSwitchNM {
-    height: 40px;
+    height: 30px;
     background-color: #ffffff;
-    width: 70px;
+    width: 55px;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -260,4 +270,128 @@
     opacity: 100;
     transition: .5s;
     border: 1px solid #F0D85A;
+}
+
+
+/*SKILLS SECTION*/
+
+.skillsSection {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.skillsSectionNM {
+    width: 100%;
+    height: 1200px;
+    position: relative;
+    background-color: #393D3F;
+}
+
+.skillsSectionTitle {
+    position: relative;
+    margin: auto;
+    width: 85%;
+    color: #2A90A9;
+}
+
+.skillsSectionTitleNM {
+    position: relative;
+    margin: auto;
+    width: 85%;
+    color: #F0D85A;
+}
+
+.skillsSectionTitle>p {
+    text-align: left;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.skillsSectionTitleNM>p {
+    text-align: left;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.webProgramming {
+    fill: #2a90a9;
+    position: absolute;
+    top: 10px;
+    left: 60px;
+}
+
+.webProgrammingNM {
+    fill: #F0D85A;
+    position: absolute;
+    top: 10px;
+    left: 60px;
+}
+
+.skillsSectionContent>p {
+    width: 85%;
+    margin: auto;
+    margin-top: 80px;
+    text-align: start;
+    color: #393D3F;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.skillsSectionContentNM>p {
+    width: 85%;
+    margin: auto;
+    margin-top: 80px;
+    text-align: start;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.skillContainer {
+    display: grid;
+    width: 85%;
+    margin: 20px auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 40px;
+}
+
+.skillItem {
+    border-radius: 6px;
+    padding: 10px 0;
+    background-color: #e9e9e9;
+    color: #2A90A9;
+    font-weight: bold;
+    max-width: 170px;
+}
+
+.skillItem:hover {
+    background-color: #2A90A9;
+    color: #ffffff;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.skillItemNM {
+    border-radius: 6px;
+    padding: 10px 0;
+    background-color: #555555;
+    color: #F0D85A;
+    font-weight: bold;
+    max-width: 170px;
+}
+
+.skillItemNM:hover {
+    background-color: #F0D85A;
+    color: #555555;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.circuitSvg {
+    fill: #2A90A9;
+    position: absolute;
+    top: 720px;
+    right: -95px;
 }
