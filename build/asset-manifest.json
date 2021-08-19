@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.379e250c.chunk.css",
+    "main.css": "/static/css/main.effd30cb.chunk.css",
     "main.js": "/static/js/main.fdf53681.chunk.js",
     "main.js.map": "/static/js/main.fdf53681.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.47957259.js",
@@ -8,14 +8,14 @@
     "static/js/2.65fc52fd.chunk.js": "/static/js/2.65fc52fd.chunk.js",
     "static/js/2.65fc52fd.chunk.js.map": "/static/js/2.65fc52fd.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.379e250c.chunk.css.map": "/static/css/main.379e250c.chunk.css.map",
+    "static/css/main.effd30cb.chunk.css.map": "/static/css/main.effd30cb.chunk.css.map",
     "static/js/2.65fc52fd.chunk.js.LICENSE.txt": "/static/js/2.65fc52fd.chunk.js.LICENSE.txt",
     "static/media/Home.css": "/static/media/memojiiAppleCris.ac9a8b53.png"
   },
   "entrypoints": [
     "static/js/runtime-main.47957259.js",
     "static/js/2.65fc52fd.chunk.js",
-    "static/css/main.379e250c.chunk.css",
+    "static/css/main.effd30cb.chunk.css",
     "static/js/main.fdf53681.chunk.js"
   ]
 }
