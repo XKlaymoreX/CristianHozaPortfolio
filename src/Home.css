@@ -410,6 +410,7 @@
         
         .upperCaption {
             color: #393D3F;
+            opacity: 30%;
             text-transform: uppercase;
             font-weight: bold;
             font-size: 18px;
@@ -419,6 +420,7 @@
         
         .upperCaptionNM {
             color: #ffffff;
+            opacity: 40%;
             text-transform: uppercase;
             font-weight: bold;
             font-size: 18px;
