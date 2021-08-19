@@ -69,10 +69,16 @@ const App = () => {
     <div className="Home">
       <div className={nightModeClass("landingSection").concat(" section")}>
         {/* IMAGE THUMBNAIL */}
-        <div className="profileImageThumbnail centered">
+        {/* <div className="profileImageThumbnail centered">
           <div className={nightModeClass("profileImage")}></div>
           <div className="profileImageFlag">🇨🇭</div>
-        </div>
+        </div> */}
+
+
+
+
+
+        
         <p>HI THERE 👋🏻 I'M</p>
         <span>Cristian Hoza</span>
         <div className={nightModeClass("myProfession")}>full stack developer & <br /> web design enthusiast</div>
@@ -85,13 +91,6 @@ const App = () => {
           <MoonSun isNight={isNightModeOn} className={"moonSun"} />
         </div>
       </div>
-
-
-
-
-
-
-
       <div className={nightModeClass("myWorkSection").concat(" section")}>
         <div className={nightModeClass("sectionTitle")}>
           <WebProgramming isNight={isNightModeOn} />
@@ -114,16 +113,6 @@ const App = () => {
           })}
         </div>
       </div>
-
-
-
-
-
-
-
-
-
-
       <div className={nightModeClass("skillsSection").concat(" section")}>
         <div className={nightModeClass("sectionTitle")}>
           <WebProgramming isNight={isNightModeOn} />
