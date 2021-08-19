@@ -5,9 +5,10 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 import React from 'react';
 import MoonSun from './Shared/Svgs/MoonSun'
 import WebProgramming from './Shared/Svgs/WebProgramming'
-import {v4 as uuid} from 'uuid'
+import { v4 as uuid } from 'uuid'
 import SkillComponent from './Components/SkillComponent'
 import Circuit from './Shared/Svgs/Circuit'
+import Link from './Shared/Svgs/Link'
 gsap.registerPlugin(ScrollTrigger)
 
 const App = () => {
@@ -17,18 +18,21 @@ const App = () => {
       opacity: 0
     }, { opacity: 1, duration: .8 })
 
-    gsap.fromTo('.circuitSvg',{
-      rotateZ:'45deg'
-    },{
-      scrollTrigger:{
-        trigger:'.landingSection',
-        scrub:2,
-        start:'top top',
-        end:'bottom top',
-      },
-      rotateZ:'-180deg'
-    })
 
+    if (isNightModeOn) {
+    } else {
+      gsap.fromTo('.circuitSvg', {
+        rotateZ: '45deg'
+      }, {
+        scrollTrigger: {
+          trigger: '.landingSection',
+          scrub: 2,
+          start: 'top top',
+          end: 'bottom top',
+        },
+        rotateZ: '-180deg'
+      })
+    }
 
   }, [])
 
@@ -57,9 +61,10 @@ const App = () => {
     }
   }
 
-  const frontendSkills = ["React","Typescript","Javascript","HTML5","CSS3","Bootstrap","Sass","Webpack","GSAP"]
-  const backEndSkills = [".NET", "C#","Azure","EFCore","Node.JS","Express.JS","LINQ"]
-  const frameworksAndOtherSkills = ["MERN Stack","ASP.NET MVC","SAP","PowerBi","Premiere Pro","Figma","After Effects","Photoshop","SQL"]
+  const workSkills = ["C#","PowerBi", "MSQL", "React","Typescript","Azure"]
+  const frontendSkills = ["React", "Typescript", "Javascript", "HTML5", "CSS3", "Bootstrap", "Sass", "Webpack", "GSAP"]
+  const backEndSkills = [".NET", "C#", "Azure", "EFCore", "Node.JS", "Express.JS", "LINQ"]
+  const frameworksAndOtherSkills = ["MERN Stack", "ASP.NET MVC", "SAP", "PowerBi", "Premiere Pro", "Figma", "After Effects", "Photoshop", "SQL"]
   return (
     <div className="Home">
       <div className={nightModeClass("landingSection").concat(" section")}>
@@ -79,10 +84,48 @@ const App = () => {
         <div className={nightModeClass("lightModeSwitch")} onClick={() => lightModeSwitchAnimationTrigger()}>
           <MoonSun isNight={isNightModeOn} className={"moonSun"} />
         </div>
-        <Circuit className={nightModeClass("circuitSvg")}/>
       </div>
+
+
+
+
+
+
+
+      <div className={nightModeClass("myWorkSection").concat(" section")}>
+        <div className={nightModeClass("sectionTitle")}>
+          <WebProgramming isNight={isNightModeOn} />
+          <p>My<br />Work</p>
+        </div>
+        <div className={nightModeClass("upperCaption").concat(" upperCaptionOne")}>
+          currently having fun as
+        </div>
+        <p className={nightModeClass("workDetail").concat(" workDetailOne")}>Specialist Technical <br/> Consultant</p>
+        <div className={nightModeClass("upperCaption").concat(" upperCaptionTwo")}>
+          with..
+        </div>
+        <p className={nightModeClass("workDetail").concat(" workDetailTwo")} > <Link className={nightModeClass("linkSvg")} />Aubay Italy</p>
+        <div className={nightModeClass("upperCaption").concat(" upperCaptionThree")}>
+          using..
+        </div>
+        <div className={"workSkillsGrid"}>
+          {workSkills.map(item => {
+            return <SkillComponent key={uuid()} skill={item} className={nightModeClass("skillItem")} />
+          })}
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
       <div className={nightModeClass("skillsSection").concat(" section")}>
-        <div className={nightModeClass("skillsSectionTitle")}>
+        <div className={nightModeClass("sectionTitle")}>
           <WebProgramming isNight={isNightModeOn} />
           <p>My<br />Skills</p>
         </div>
@@ -92,28 +135,30 @@ const App = () => {
           <div className="skillContainer">
             {frontendSkills.map(item => {
               return (
-                <SkillComponent key={uuid()} skill={item} className={nightModeClass("skillItem")}/>
+                <SkillComponent key={uuid()} skill={item} className={nightModeClass("skillItem")} />
               )
             })}
           </div>
           <p>Backend</p>
           <div className="skillContainer">
-          {backEndSkills.map(item => {
+            {backEndSkills.map(item => {
               return (
-                <SkillComponent key={uuid()} skill={item} className={nightModeClass("skillItem")}/>
+                <SkillComponent key={uuid()} skill={item} className={nightModeClass("skillItem")} />
               )
             })}
           </div>
           <p>Framweworks & Others</p>
           <div className="skillContainer">
-          {frameworksAndOtherSkills.map(item => {
+            {frameworksAndOtherSkills.map(item => {
               return (
-                <SkillComponent key={uuid()} skill={item} className={nightModeClass("skillItem")}/>
+                <SkillComponent key={uuid()} skill={item} className={nightModeClass("skillItem")} />
               )
             })}
           </div>
         </div>
       </div>
+      <Circuit className={nightModeClass("circuitSvg")} />
+
     </div>
   );
 }
