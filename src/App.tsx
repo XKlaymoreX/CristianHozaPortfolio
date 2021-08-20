@@ -76,7 +76,7 @@ const App = () => {
         <p>HI THERE 👋🏻 I'M</p>
         <span>Cristian Hoza</span>
         <div className={nightModeClass("myProfession")}>full stack developer & <br /> web design enthusiast</div>
-        <div className={nightModeClass("myProfessionDetailed")}>I’m a specialist Full Stack Developer<br />
+        <div className={nightModeClass("myProfessionDetailed")}>I’m a 20 y.o specialist Full Stack Developer<br />
           with growing UI/UX Skills,<br />
           based in Switzerland.
         </div>
