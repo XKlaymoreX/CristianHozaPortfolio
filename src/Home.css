@@ -20,6 +20,81 @@
             height: auto;
             min-height: 820px;
             color: #393D3F;
+            position: relative;
+        }
+        
+        .upperDivider {
+            width: 100%;
+            height: 300px;
+            background-color: #2A90A9;
+            background-image: url(./Shared/Media/memojiiAppleCris.png);
+            background-repeat: no-repeat;
+            background-size: 200px 200px;
+            background-position-y: 140%;
+            background-attachment: scroll;
+        }
+        
+        .upperDividerNM {
+            width: 100%;
+            height: 300px;
+            background-color: #F0D85A;
+            background-image: url(./Shared/Media/memojiiAppleCris.png);
+            background-repeat: no-repeat;
+            background-size: 200px 200px;
+            background-position-y: 140%;
+            background-attachment: scroll;
+        }
+        
+        .wavyDivider {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            background-color: #2A90A9;
+            background-image: url(./Shared/Media/memojiiAppleCris.png);
+            background-repeat: no-repeat;
+            background-size: 200px 200px;
+            background-position-y: 109%;
+            background-attachment: scroll;
+        }
+        
+        .wavyDividerNM {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            background-color: #F0D85A;
+            background-image: url(./Shared/Media/memojiiAppleCris.png);
+            background-repeat: no-repeat;
+            background-size: 200px 200px;
+            background-position-y: 109%;
+            background-attachment: scroll;
+        }
+        
+        .wavyDividerNM svg {
+            position: relative;
+            display: block;
+            width: calc(111% + 1.3px);
+            height: 30px;
+            transform: rotateY(180deg);
+        }
+        
+        .wavyDividerNM .shape-fill {
+            fill: #393D3F;
+        }
+        
+        .wavyDivider svg {
+            position: relative;
+            display: block;
+            width: calc(111% + 1.3px);
+            height: 30px;
+            transform: rotateY(180deg);
+        }
+        
+        .wavyDivider .shape-fill {
+            fill: white;
         }
         /*IMAGE THUMBNAIL*/
         
@@ -56,6 +131,9 @@
         
         .landingSection>p {
             margin-top: 70px;
+            text-align: left;
+            width: 93%;
+            margin-left: 7%;
         }
         
         .landingSection>span {
@@ -63,6 +141,11 @@
             font-weight: bold;
             font-size: 48px;
             margin-top: 10px;
+            text-align: left;
+            display: inline-block;
+            width: 100%;
+            width: 93%;
+            margin-left: 7%;
         }
         
         .myProfession {
@@ -75,12 +158,18 @@
             font-size: 22px;
             margin-top: 15px;
             line-height: 30px;
+            text-align: left;
+            width: 93%;
+            margin-left: 7%;
         }
         
         .myProfessionDetailed {
             font-weight: bold;
             color: #393D3F;
             margin-top: 30px;
+            text-align: left;
+            width: 93%;
+            margin-left: 7%;
         }
         /*BUTTON*/
         
@@ -102,6 +191,7 @@
             -o-transition: .1s;
             -moz-transition: .1s;
             transition: .1s;
+            margin-left: 7%;
         }
         
         .callToAction:hover {
@@ -141,12 +231,20 @@
         
         .landingSectionNM>p {
             margin-top: 70px;
+            width: 93%;
+            margin-left: 7%;
+            text-align: left;
         }
         
         .landingSectionNM>span {
             font-style: italic;
             font-weight: bold;
             font-size: 48px;
+            margin-top: 10px;
+            width: 93%;
+            margin-left: 7%;
+            text-align: left;
+            display: inline-block;
         }
         
         .callToActionNM {
@@ -168,6 +266,8 @@
             -moz-transition: .1s;
             transition: .1s;
             border: 2px solid #FFC857;
+            margin-left: 7%;
+            text-align: left;
         }
         
         .callToActionNM:hover {
@@ -191,15 +291,21 @@
             font-weight: bolder;
             -webkit-text-stroke-width: 1px;
             -webkit-text-stroke-color: #FFC857;
-            font-size: 18px;
+            font-size: 22px;
             margin-top: 15px;
             line-height: 30px;
+            width: 93%;
+            margin-left: 7%;
+            text-align: left;
         }
         
         .myProfessionDetailedNM {
             font-weight: bold;
             color: #ffffff;
             margin-top: 30px;
+            width: 93%;
+            margin-left: 7%;
+            text-align: left;
         }
         
         .profileImageNM {

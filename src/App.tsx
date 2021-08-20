@@ -9,6 +9,7 @@ import { v4 as uuid } from 'uuid'
 import SkillComponent from './Components/SkillComponent'
 import Circuit from './Shared/Svgs/Circuit'
 import Link from './Shared/Svgs/Link'
+import WavyBackground from './Shared/Svgs/WavyBackground'
 gsap.registerPlugin(ScrollTrigger)
 
 const App = () => {
@@ -73,12 +74,8 @@ const App = () => {
           <div className={nightModeClass("profileImage")}></div>
           <div className="profileImageFlag">🇨🇭</div>
         </div> */}
+        <WavyBackground classNameOne={nightModeClass("wavyDivider")} classNameTwo={nightModeClass("upperDivider")} />
 
-
-
-
-
-        
         <p>HI THERE 👋🏻 I'M</p>
         <span>Cristian Hoza</span>
         <div className={nightModeClass("myProfession")}>full stack developer & <br /> web design enthusiast</div>
@@ -86,7 +83,7 @@ const App = () => {
           with growing UI/UX Skills,<br />
           based in Switzerland.
         </div>
-        <div className={nightModeClass("callToAction").concat(" centered")}>check my skills</div>
+        <div className={nightModeClass("callToAction")}>check my skills</div>
         <div className={nightModeClass("lightModeSwitch")} onClick={() => lightModeSwitchAnimationTrigger()}>
           <MoonSun isNight={isNightModeOn} className={"moonSun"} />
         </div>
