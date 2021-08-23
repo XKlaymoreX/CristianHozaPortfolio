@@ -2,6 +2,8 @@ import './Home.css';
 import { useEffect, useState } from 'react';
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import TextPlugin from 'gsap/TextPlugin'
+
 import React from 'react';
 import MoonSun from './Shared/Svgs/MoonSun'
 import WebProgramming from './Shared/Svgs/WebProgramming'
@@ -11,6 +13,7 @@ import Circuit from './Shared/Svgs/Circuit'
 import Link from './Shared/Svgs/Link'
 import WavyBackground from './Shared/Svgs/WavyBackground'
 gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(TextPlugin)
 
 const App = () => {
   const [isNightModeOn, setNightMode] = useState(false)
@@ -74,7 +77,7 @@ const App = () => {
           <div className={nightModeClass("profileImage")}></div>
           <div className="profileImageFlag">🇨🇭</div>
         </div> */}
-        <WavyBackground classNameOne={nightModeClass("wavyDivider")} classNameTwo={nightModeClass("upperDivider")} />
+        <WavyBackground classNameOne={nightModeClass("wavyDivider")} classNameTwo={nightModeClass("upperDivider")}  classNameThree={nightModeClass("thinkingCircles")}/>
 
         <p>HI THERE 👋🏻 I'M</p>
         <span>Cristian Hoza</span>

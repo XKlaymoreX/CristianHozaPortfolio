@@ -1,643 +1,728 @@
-        * {
-            box-sizing: border-box;
-        }
-        
-        .centered {
-            margin: auto
-        }
-        
-        .Home {
-            text-align: center;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            width: 100%;
-            min-height: 820px;
-            display: flex;
-            flex-flow: column;
-        }
-        
-        .landingSection {
-            width: 100%;
-            height: auto;
-            min-height: 820px;
-            color: #393D3F;
-            position: relative;
-        }
-        
-        .upperDivider {
-            width: 100%;
-            height: 300px;
-            background-color: #2A90A9;
-            background-image: url(./Shared/Media/memojiiAppleCris.png);
-            background-repeat: no-repeat;
-            background-size: 200px 200px;
-            background-position-y: 140%;
-            background-attachment: scroll;
-        }
-        
-        .upperDividerNM {
-            width: 100%;
-            height: 300px;
-            background-color: #F0D85A;
-            background-image: url(./Shared/Media/memojiiAppleCris.png);
-            background-repeat: no-repeat;
-            background-size: 200px 200px;
-            background-position-y: 140%;
-            background-attachment: scroll;
-        }
-        
-        .wavyDivider {
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-            background-color: #2A90A9;
-            background-image: url(./Shared/Media/memojiiAppleCris.png);
-            background-repeat: no-repeat;
-            background-size: 200px 200px;
-            background-position-y: 109%;
-            background-attachment: scroll;
-        }
-        
-        .wavyDividerNM {
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-            background-color: #F0D85A;
-            background-image: url(./Shared/Media/memojiiAppleCris.png);
-            background-repeat: no-repeat;
-            background-size: 200px 200px;
-            background-position-y: 109%;
-            background-attachment: scroll;
-        }
-        
-        .wavyDividerNM svg {
-            position: relative;
-            display: block;
-            width: calc(111% + 1.3px);
-            height: 30px;
-            transform: rotateY(180deg);
-        }
-        
-        .wavyDividerNM .shape-fill {
-            fill: #393D3F;
-        }
-        
-        .wavyDivider svg {
-            position: relative;
-            display: block;
-            width: calc(111% + 1.3px);
-            height: 30px;
-            transform: rotateY(180deg);
-        }
-        
-        .wavyDivider .shape-fill {
-            fill: white;
-        }
-        /*IMAGE THUMBNAIL*/
-        
-        .profileImageThumbnail {
-            width: 222px;
-            height: 222px;
-            position: relative;
-            margin-top: 50px;
-        }
-        
-        .profileImage {
-            width: 220px;
-            height: 220px;
-            border-radius: 100%;
-            background-image: url(../src/Shared/Media/memojiiAppleCris.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            /*border: 6px solid #468C9D;*/
-            background-size: 230px 240px;
-            background-color: #38809E;
-            -webkit-box-shadow: 0px 10px 19px 1px #38809E;
-            box-shadow: 0px 10px 19px 1px #38809E;
-        }
-        
-        .profileImageFlag {
-            bottom: -20px;
-            right: 0px;
-            position: absolute;
-            font-size: 60px;
-            width: 100px;
-            user-select: none;
-        }
-        /*TEXT*/
-        
-        .landingSection>p {
-            margin-top: 70px;
-            text-align: left;
-            width: 93%;
-            margin-left: 7%;
-        }
-        
-        .landingSection>span {
-            font-style: italic;
-            font-weight: bold;
-            font-size: 48px;
-            margin-top: 10px;
-            text-align: left;
-            display: inline-block;
-            width: 100%;
-            width: 93%;
-            margin-left: 7%;
-        }
-        
-        .myProfession {
-            text-transform: uppercase;
-            font-style: italic;
-            color: #38809E;
-            font-weight: bolder;
-            -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color: #38809E;
-            font-size: 22px;
-            margin-top: 15px;
-            line-height: 30px;
-            text-align: left;
-            width: 93%;
-            margin-left: 7%;
-        }
-        
-        .myProfessionDetailed {
-            font-weight: bold;
-            color: #393D3F;
-            margin-top: 30px;
-            text-align: left;
-            width: 93%;
-            margin-left: 7%;
-        }
-        /*BUTTON*/
-        
-        .callToAction {
-            background-color: #468C9D;
-            width: 190px;
-            height: 35px;
-            color: white;
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-transform: uppercase;
-            font-style: italic;
-            font-weight: bold;
-            cursor: pointer;
-            user-select: none;
-            -webkit-transition: .1s;
-            -o-transition: .1s;
-            -moz-transition: .1s;
-            transition: .1s;
-            margin-left: 7%;
-        }
-        
-        .callToAction:hover {
-            background-color: white;
-            color: #468C9D;
-            border: 2px solid #468C9D;
-            transform: scale(1.2);
-            -webkit-box-shadow: 0px 0px 19px 2px #46a1c7;
-            box-shadow: 0px 0px 19px 2px #46a1c7;
-            -webkit-transition: .3s;
-            -o-transition: .3s;
-            -moz-transition: .3s;
-            transition: .3s;
-        }
-        
-        .lightModeSwitch {
-            height: 30px;
-            background-color: #393D3F;
-            width: 55px;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-        /*NIGHT MODE PHONE*/
-        
-        .landingSectionNM {
-            width: 100%;
-            height: auto;
-            min-height: 820px;
-            color: #ffffff;
-            background-color: #393D3F;
-        }
-        
-        .landingSectionNM>p {
-            margin-top: 70px;
-            width: 93%;
-            margin-left: 7%;
-            text-align: left;
-        }
-        
-        .landingSectionNM>span {
-            font-style: italic;
-            font-weight: bold;
-            font-size: 48px;
-            margin-top: 10px;
-            width: 93%;
-            margin-left: 7%;
-            text-align: left;
-            display: inline-block;
-        }
-        
-        .callToActionNM {
-            background-color: #FFC857;
-            width: 190px;
-            height: 35px;
-            color: #393D3F;
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-transform: uppercase;
-            font-style: italic;
-            font-weight: bold;
-            cursor: pointer;
-            user-select: none;
-            -webkit-transition: .1s;
-            -o-transition: .1s;
-            -moz-transition: .1s;
-            transition: .1s;
-            border: 2px solid #FFC857;
-            margin-left: 7%;
-            text-align: left;
-        }
-        
-        .callToActionNM:hover {
-            background-color: white;
-            color: #FFC857;
-            border: 2px solid #FFC857;
-            transform: scale(1.2);
-            -webkit-box-shadow: 0px 0px 19px 2px #FFC857;
-            box-shadow: 0px 0px 19px 2px #FFC857;
-            -webkit-transition: .3s;
-            -o-transition: .3s;
-            -moz-transition: .3s;
-            transition: .3s;
-            background-color: #393D3F;
-        }
-        
-        .myProfessionNM {
-            text-transform: uppercase;
-            font-style: italic;
-            color: #FFC857;
-            font-weight: bolder;
-            -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color: #FFC857;
-            font-size: 22px;
-            margin-top: 15px;
-            line-height: 30px;
-            width: 93%;
-            margin-left: 7%;
-            text-align: left;
-        }
-        
-        .myProfessionDetailedNM {
-            font-weight: bold;
-            color: #ffffff;
-            margin-top: 30px;
-            width: 93%;
-            margin-left: 7%;
-            text-align: left;
-        }
-        
-        .profileImageNM {
-            width: 220px;
-            height: 220px;
-            border-radius: 100%;
-            background-image: url(../src/Shared/Media/memojiiAppleCris.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            /*border: 6px solid #468C9D;*/
-            background-size: 230px 240px;
-            background-color: #FFC857;
-            -webkit-box-shadow: 0px 10px 19px 1px #FFC857;
-            box-shadow: 0px 10px 19px 1px #FFC857;
-        }
-        
-        .lightModeSwitchNM {
-            height: 30px;
-            background-color: #ffffff;
-            width: 55px;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-        
-        .moonSun {
-            margin-left: 4px;
-        }
-        
-        .majorMoonSunCircle {
-            opacity: 100;
-            fill: #F0D85A;
-        }
-        
-        .majorMoonSunCircleNM {
-            opacity: 100;
-            fill: #393D3F;
-        }
-        
-        .minorMoonSunCircle {
-            opacity: 100;
-            transition: .5s;
-        }
-        
-        .minorMoonSunCircleNM {
-            opacity: 0;
-            transition: .5s;
-        }
-        
-        .moon {
-            opacity: 0;
-            transition: .5s;
-        }
-        
-        .moonNM {
-            opacity: 100;
-            transition: .5s;
-            border: 1px solid #F0D85A;
-        }
-        /*SKILLS SECTION*/
-        
-        .skillsSection {
-            width: 100%;
-            height: auto;
-            position: relative;
-        }
-        
-        .skillsSectionNM {
-            width: 100%;
-            height: auto;
-            position: relative;
-            background-color: #393D3F;
-        }
-        
-        .sectionTitle {
-            position: relative;
-            margin: auto;
-            width: 85%;
-            color: #2A90A9;
-            user-select: none;
-        }
-        
-        .sectionTitleNM {
-            position: relative;
-            margin: auto;
-            width: 85%;
-            color: #F0D85A;
-            user-select: none;
-        }
-        
-        .sectionTitle>p {
-            text-align: left;
-            font-size: 36px;
-            font-weight: bold;
-        }
-        
-        .sectionTitleNM>p {
-            text-align: left;
-            font-size: 36px;
-            font-weight: bold;
-        }
-        
-        .webProgramming {
-            fill: #2a90a9;
-            position: absolute;
-            top: 10px;
-            left: 60px;
-        }
-        
-        .webProgrammingNM {
-            fill: #F0D85A;
-            position: absolute;
-            top: 10px;
-            left: 60px;
-        }
-        
-        .skillsSectionContent>p {
-            width: 85%;
-            margin: auto;
-            margin-top: 80px;
-            text-align: start;
-            color: #393D3F;
-            font-weight: bold;
-            font-size: 22px;
-        }
-        
-        .skillsSectionContentNM>p {
-            width: 85%;
-            margin: auto;
-            margin-top: 80px;
-            text-align: start;
-            color: white;
-            font-weight: bold;
-            font-size: 22px;
-        }
-        
-        .skillContainer {
-            display: grid;
-            width: 85%;
-            margin: 20px auto;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-auto-rows: 1fr;
-            gap: 40px;
-        }
-        
-        .skillItem {
-            border-radius: 6px;
-            padding: 10px;
-            background-color: #f5f5f5;
-            color: #2A90A9;
-            font-weight: bold;
-            max-width: 170px;
-            user-select: none;
-        }
-        
-        .skillItem:hover {
-            background-color: #2A90A9;
-            color: #ffffff;
-            cursor: pointer;
-            transition: .4s;
-        }
-        
-        .skillItemNM {
-            border-radius: 6px;
-            padding: 10px;
-            background-color: #555555;
-            color: #F0D85A;
-            font-weight: bold;
-            max-width: 170px;
-            user-select: none;
-        }
-        
-        .skillItemNM:hover {
-            background-color: #F0D85A;
-            color: #555555;
-            cursor: pointer;
-            transition: .4s;
-        }
-        
-        .circuitSvg {
-            fill: #2A90A9;
-            position: absolute;
-            top: 720px;
-            right: -95px;
-        }
-        
-        .circuitSvgNM {
-            fill: #F0D85A;
-            position: absolute;
-            top: 720px;
-            right: -95px;
-        }
-        
-        .myWorkSection {
-            width: 100%;
-            height: auto;
-        }
-        
-        .myWorkSectionNM {
-            width: 100%;
-            height: auto;
-            background-color: #393D3F;
-        }
-        
-        .upperCaption {
-            color: #393D3F;
-            opacity: .3;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 18px;
-            width: 85%;
-            margin: 0 auto;
-        }
-        
-        .upperCaptionNM {
-            color: #ffffff;
-            opacity: .4;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 18px;
-            width: 85%;
-            margin: 0 auto;
-        }
-        
-        .workDetail {
-            color: #2A90A9;
-            font-weight: bold;
-            font-size: 30px;
-            font-style: italic;
-            margin: 0 auto;
-            width: 85%;
-        }
-        
-        .workDetailNM {
-            color: #F0D85A;
-            font-weight: bold;
-            font-size: 30px;
-            font-style: italic;
-            margin: 0 auto;
-            width: 85%;
-        }
-        
-        .linkSvg {
-            fill: #2a90A9;
-            width: 27px;
-            height: 27px;
-            opacity: 30%;
-        }
-        
-        .linkSvgNM {
-            fill: #F0D85A;
-            width: 27px;
-            height: 27px;
-            opacity: 30%;
-        }
-        
-        .workDetailOne {
-            text-align: left;
-        }
-        
-        .workDetailTwo:hover {
-            text-decoration: underline;
-            cursor: pointer;
-            user-select: none;
-        }
-        
-        .upperCaptionOne {
-            text-align: left;
-        }
-        
-        .upperCaptionTwo {
-            margin-top: 20px;
-            text-align: center;
-        }
-        
-        .upperCaptionThree {
-            margin-top: 40px;
-            text-align: left;
-        }
-        
-        .workSkillsGrid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(6, 1fr);
-            width: 85%;
-            margin: 0 auto;
-            margin-top: 40px;
-            row-gap: 20px;
-        }
-        
-        .workSkillsGrid>.skillItem {
-            background-color: #2A90A9;
-            color: white;
-            cursor: auto;
-        }
-        
-        .workSkillsGrid>.skillItemNM {
-            background-color: #F0D85A;
-            color: #393D3F;
-            cursor: auto;
-        }
-        
-        .workSkillsGrid>div:nth-child(1) {
-            grid-column: 1/2;
-            grid-row: 1 / 2;
-        }
-        
-        .workSkillsGrid>div:nth-child(2) {
-            grid-column: 2 / 3;
-            grid-row: 2 / 3;
-        }
-        
-        .workSkillsGrid>div:nth-child(3) {
-            grid-column: 3/4;
-            grid-row: 3/4;
-        }
-        
-        .workSkillsGrid>div:nth-child(4) {
-            grid-column: 1/2;
-            grid-row: 4/5;
-        }
-        
-        .workSkillsGrid>div:nth-child(5) {
-            grid-column: 2/3;
-            grid-row: 5/6;
-        }
-        
-        .workSkillsGrid>div:nth-child(6) {
-            grid-column: 3/4;
-            grid-row: 6/7;
-        }
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+.centered {
+    margin: auto
+}
+
+.Home {
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+    min-height: 820px;
+    display: flex;
+    flex-flow: column;
+}
+
+.landingSection {
+    width: 100%;
+    height: auto;
+    min-height: 820px;
+    color: #393D3F;
+    position: relative;
+}
+
+
+/*Background landing section*/
+
+.upperDivider {
+    width: 100%;
+    height: 300px;
+    background-color: #2A90A9;
+    background-image: url(./Shared/Media/memojiiAppleCris.png);
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+    background-position-y: 143%;
+    position: relative;
+}
+
+.upperDividerNM {
+    width: 100%;
+    height: 300px;
+    background-color: #F0D85A;
+    background-image: url(./Shared/Media/memojiiAppleCris.png);
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+    background-position-y: 143%;
+    position: relative;
+}
+
+.wavyDivider {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    background-color: #2A90A9;
+    background-image: url(./Shared/Media/memojiiAppleCris.png);
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+    background-position-y: 110%;
+    background-attachment: scroll;
+}
+
+.wavyDividerNM {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    background-color: #F0D85A;
+    background-image: url(./Shared/Media/memojiiAppleCris.png);
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+    background-position-y: 110%;
+    background-attachment: scroll;
+}
+
+.wavyDividerNM svg {
+    position: relative;
+    display: block;
+    width: calc(111% + 1.3px);
+    height: 30px;
+    transform: rotateY(180deg);
+}
+
+.wavyDividerNM .shape-fill {
+    fill: #393D3F;
+}
+
+.wavyDivider svg {
+    position: relative;
+    display: block;
+    width: calc(111% + 1.3px);
+    height: 30px;
+    transform: rotateY(180deg);
+}
+
+.wavyDivider .shape-fill {
+    fill: white;
+}
+
+
+/*Background thinking circles*/
+
+.thinkingCircles {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 180px;
+    bottom: 55px;
+    color: white;
+    background-color: #393D3F;
+    text-align: left;
+    padding: 15px;
+    font-family: 'Source Code Pro';
+    font-size: 13px;
+    border-top: 15px solid #4a4949;
+    border-radius: 6px;
+    border-bottom: 15px solid #0572a0;
+    user-select: none;
+}
+
+.vsCodeIconCircleOne {
+    background-color: rgb(174, 36, 36);
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    position: absolute;
+    top: -11px;
+    left: 10px;
+}
+
+.vsCodeIconCircleTwo {
+    background-color: rgb(174, 146, 36);
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    position: absolute;
+    top: -11px;
+    left: 25px;
+}
+
+.vsCodeIconCircleThree {
+    background-color: rgb(32, 150, 8);
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    position: absolute;
+    top: -11px;
+    left: 40px;
+}
+
+
+/*Thinking Circles Night Mode*/
+
+.thinkingCirclesNM {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 180px;
+    bottom: 55px;
+    background-color: #393D3F;
+    text-align: left;
+    padding: 15px;
+    font-family: 'Source Code Pro';
+    font-size: 13px;
+    border-top: 15px solid #4a4949;
+    border-radius: 6px;
+    border-bottom: 15px solid #0572a0;
+    user-select: none;
+}
+
+
+/*IMAGE THUMBNAIL*/
+
+.profileImageThumbnail {
+    width: 222px;
+    height: 222px;
+    position: relative;
+    margin-top: 50px;
+}
+
+.profileImage {
+    width: 220px;
+    height: 220px;
+    border-radius: 100%;
+    background-image: url(../src/Shared/Media/memojiiAppleCris.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    /*border: 6px solid #468C9D;*/
+    background-size: 230px 240px;
+    background-color: #38809E;
+    -webkit-box-shadow: 0px 10px 19px 1px #38809E;
+    box-shadow: 0px 10px 19px 1px #38809E;
+}
+
+.profileImageFlag {
+    bottom: -20px;
+    right: 0px;
+    position: absolute;
+    font-size: 60px;
+    width: 100px;
+    user-select: none;
+}
+
+
+/*TEXT*/
+
+.landingSection>p {
+    margin-top: 70px;
+    text-align: left;
+    width: 93%;
+    margin-left: 7%;
+}
+
+.landingSection>span {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 48px;
+    margin-top: 10px;
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    width: 93%;
+    margin-left: 7%;
+}
+
+.myProfession {
+    text-transform: uppercase;
+    font-style: italic;
+    color: #38809E;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #38809E;
+    font-size: 22px;
+    margin-top: 15px;
+    line-height: 30px;
+    text-align: left;
+    width: 93%;
+    margin-left: 7%;
+}
+
+.myProfessionDetailed {
+    font-weight: bold;
+    color: #393D3F;
+    margin-top: 30px;
+    text-align: left;
+    width: 93%;
+    margin-left: 7%;
+}
+
+
+/*BUTTON*/
+
+.callToAction {
+    background-color: #468C9D;
+    width: 190px;
+    height: 35px;
+    color: white;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    -webkit-transition: .1s;
+    -o-transition: .1s;
+    -moz-transition: .1s;
+    transition: .1s;
+    margin-left: 7%;
+}
+
+.callToAction:hover {
+    background-color: white;
+    color: #468C9D;
+    border: 2px solid #468C9D;
+    transform: scale(1.2);
+    -webkit-box-shadow: 0px 0px 19px 2px #46a1c7;
+    box-shadow: 0px 0px 19px 2px #46a1c7;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    -moz-transition: .3s;
+    transition: .3s;
+}
+
+.lightModeSwitch {
+    height: 30px;
+    background-color: #393D3F;
+    width: 55px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+
+/*NIGHT MODE PHONE*/
+
+.landingSectionNM {
+    width: 100%;
+    height: auto;
+    min-height: 820px;
+    color: #ffffff;
+    background-color: #393D3F;
+}
+
+.landingSectionNM>p {
+    margin-top: 70px;
+    width: 93%;
+    margin-left: 7%;
+    text-align: left;
+}
+
+.landingSectionNM>span {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 48px;
+    margin-top: 10px;
+    width: 93%;
+    margin-left: 7%;
+    text-align: left;
+    display: inline-block;
+}
+
+.callToActionNM {
+    background-color: #FFC857;
+    width: 190px;
+    height: 35px;
+    color: #393D3F;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    -webkit-transition: .1s;
+    -o-transition: .1s;
+    -moz-transition: .1s;
+    transition: .1s;
+    border: 2px solid #FFC857;
+    margin-left: 7%;
+    text-align: left;
+}
+
+.callToActionNM:hover {
+    background-color: white;
+    color: #FFC857;
+    border: 2px solid #FFC857;
+    transform: scale(1.2);
+    -webkit-box-shadow: 0px 0px 19px 2px #FFC857;
+    box-shadow: 0px 0px 19px 2px #FFC857;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    -moz-transition: .3s;
+    transition: .3s;
+    background-color: #393D3F;
+}
+
+.myProfessionNM {
+    text-transform: uppercase;
+    font-style: italic;
+    color: #FFC857;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #FFC857;
+    font-size: 22px;
+    margin-top: 15px;
+    line-height: 30px;
+    width: 93%;
+    margin-left: 7%;
+    text-align: left;
+}
+
+.myProfessionDetailedNM {
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 30px;
+    width: 93%;
+    margin-left: 7%;
+    text-align: left;
+}
+
+.profileImageNM {
+    width: 220px;
+    height: 220px;
+    border-radius: 100%;
+    background-image: url(../src/Shared/Media/memojiiAppleCris.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    /*border: 6px solid #468C9D;*/
+    background-size: 230px 240px;
+    background-color: #FFC857;
+    -webkit-box-shadow: 0px 10px 19px 1px #FFC857;
+    box-shadow: 0px 10px 19px 1px #FFC857;
+}
+
+.lightModeSwitchNM {
+    height: 30px;
+    background-color: #ffffff;
+    width: 55px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.moonSun {
+    margin-left: 4px;
+}
+
+.majorMoonSunCircle {
+    opacity: 100;
+    fill: #F0D85A;
+}
+
+.majorMoonSunCircleNM {
+    opacity: 100;
+    fill: #393D3F;
+}
+
+.minorMoonSunCircle {
+    opacity: 100;
+    transition: .5s;
+}
+
+.minorMoonSunCircleNM {
+    opacity: 0;
+    transition: .5s;
+}
+
+.moon {
+    opacity: 0;
+    transition: .5s;
+}
+
+.moonNM {
+    opacity: 100;
+    transition: .5s;
+    border: 1px solid #F0D85A;
+}
+
+
+/*SKILLS SECTION*/
+
+.skillsSection {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.skillsSectionNM {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color: #393D3F;
+}
+
+.sectionTitle {
+    position: relative;
+    margin: auto;
+    width: 85%;
+    color: #2A90A9;
+    user-select: none;
+}
+
+.sectionTitleNM {
+    position: relative;
+    margin: auto;
+    width: 85%;
+    color: #F0D85A;
+    user-select: none;
+}
+
+.sectionTitle>p {
+    text-align: left;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.sectionTitleNM>p {
+    text-align: left;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.webProgramming {
+    fill: #2a90a9;
+    position: absolute;
+    top: 10px;
+    left: 60px;
+}
+
+.webProgrammingNM {
+    fill: #F0D85A;
+    position: absolute;
+    top: 10px;
+    left: 60px;
+}
+
+.skillsSectionContent>p {
+    width: 85%;
+    margin: auto;
+    margin-top: 80px;
+    text-align: start;
+    color: #393D3F;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.skillsSectionContentNM>p {
+    width: 85%;
+    margin: auto;
+    margin-top: 80px;
+    text-align: start;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.skillContainer {
+    display: grid;
+    width: 85%;
+    margin: 20px auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 40px;
+}
+
+.skillItem {
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    color: #2A90A9;
+    font-weight: bold;
+    max-width: 170px;
+    user-select: none;
+}
+
+.skillItem:hover {
+    background-color: #2A90A9;
+    color: #ffffff;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.skillItemNM {
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #555555;
+    color: #F0D85A;
+    font-weight: bold;
+    max-width: 170px;
+    user-select: none;
+}
+
+.skillItemNM:hover {
+    background-color: #F0D85A;
+    color: #555555;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.circuitSvg {
+    fill: #2A90A9;
+    position: absolute;
+    top: 720px;
+    right: -95px;
+}
+
+.circuitSvgNM {
+    fill: #F0D85A;
+    position: absolute;
+    top: 720px;
+    right: -95px;
+}
+
+.myWorkSection {
+    width: 100%;
+    height: auto;
+}
+
+.myWorkSectionNM {
+    width: 100%;
+    height: auto;
+    background-color: #393D3F;
+}
+
+.upperCaption {
+    color: #393D3F;
+    opacity: .3;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.upperCaptionNM {
+    color: #ffffff;
+    opacity: .4;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.workDetail {
+    color: #2A90A9;
+    font-weight: bold;
+    font-size: 30px;
+    font-style: italic;
+    margin: 0 auto;
+    width: 85%;
+}
+
+.workDetailNM {
+    color: #F0D85A;
+    font-weight: bold;
+    font-size: 30px;
+    font-style: italic;
+    margin: 0 auto;
+    width: 85%;
+}
+
+.linkSvg {
+    fill: #2a90A9;
+    width: 27px;
+    height: 27px;
+    opacity: 30%;
+}
+
+.linkSvgNM {
+    fill: #F0D85A;
+    width: 27px;
+    height: 27px;
+    opacity: 30%;
+}
+
+.workDetailOne {
+    text-align: left;
+}
+
+.workDetailTwo:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    user-select: none;
+}
+
+.upperCaptionOne {
+    text-align: left;
+}
+
+.upperCaptionTwo {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.upperCaptionThree {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.workSkillsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 40px;
+    row-gap: 20px;
+}
+
+.workSkillsGrid>.skillItem {
+    background-color: #2A90A9;
+    color: white;
+    cursor: auto;
+}
+
+.workSkillsGrid>.skillItemNM {
+    background-color: #F0D85A;
+    color: #393D3F;
+    cursor: auto;
+}
+
+.workSkillsGrid>div:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1 / 2;
+}
+
+.workSkillsGrid>div:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.workSkillsGrid>div:nth-child(3) {
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+.workSkillsGrid>div:nth-child(4) {
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+.workSkillsGrid>div:nth-child(5) {
+    grid-column: 2/3;
+    grid-row: 5/6;
+}
+
+.workSkillsGrid>div:nth-child(6) {
+    grid-column: 3/4;
+    grid-row: 6/7;
+}
