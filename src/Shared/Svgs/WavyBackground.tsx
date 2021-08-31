@@ -7,7 +7,7 @@ import gsap from 'gsap'
 
 const Icon: React.FC<{ classNameOne: string, classNameTwo: string, classNameThree: string }> = ({ classNameOne, classNameTwo, classNameThree }) => {
 
-
+    /* */
 
     React.useEffect(() => {
 
@@ -31,7 +31,7 @@ const Icon: React.FC<{ classNameOne: string, classNameTwo: string, classNameThre
         myTimeline.to(".seventhCodeParagraph", {
             duration: 0,
             text: {
-                value: "&lt;<font color='#108bc1'>/</font><font color='#108bc1'>h</font><font color='#108bc1'>t</font><font color='#108bc1'>m</font><font color='#108bc1'>l</font>&gt;"
+                value: "&lt;/<font color='#108bc1'>h</font><font color='#108bc1'>t</font><font color='#108bc1'>m</font><font color='#108bc1'>l</font>&gt;"
             }
         },1.8)
         myTimeline.to(".thirdCodeParagraph", {
@@ -43,7 +43,7 @@ const Icon: React.FC<{ classNameOne: string, classNameTwo: string, classNameThre
         myTimeline.to(".sixthCodeParagraph", {
             duration: 0,
             text: {
-                value: "&lt;<font color='#108bc1'>/</font><font color='#108bc1'>h</font><font color='#108bc1'>e</font><font color='#108bc1'>a</font><font color='#108bc1'>d</font>&gt;"
+                value: "&lt;/<font color='#108bc1'>h</font><font color='#108bc1'>e</font><font color='#108bc1'>a</font><font color='#108bc1'>d</font>&gt;"
             }
         },2.8)
 
@@ -56,7 +56,7 @@ const Icon: React.FC<{ classNameOne: string, classNameTwo: string, classNameThre
         myTimeline.to(".fifthCodeParagraph", {
             duration: 0,
             text: {
-                value: "&lt;<font color='#108bc1'>/</font><font color='#108bc1'>b</font><font color='#108bc1'>o</font><font color='#108bc1'>d</font><font color='#108bc1'>y</font>&gt;"
+                value: "&lt;/<font color='#108bc1'>b</font><font color='#108bc1'>o</font><font color='#108bc1'>d</font><font color='#108bc1'>y</font>&gt;"
             }
         },3.8)
 
@@ -68,7 +68,7 @@ const Icon: React.FC<{ classNameOne: string, classNameTwo: string, classNameThre
         })
 
         return () =>{
-            myTimeline.kill()
+            myTimeline.kill(myTimeline)
         }
 
     }, [])
