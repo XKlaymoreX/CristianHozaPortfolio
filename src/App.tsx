@@ -2,6 +2,8 @@ import './Home.css';
 import { useEffect, useState } from 'react';
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+import TextPlugin from 'gsap/TextPlugin'
+
 import React from 'react';
 import MoonSun from './Shared/Svgs/MoonSun'
 import WebProgramming from './Shared/Svgs/WebProgramming'
@@ -9,7 +11,9 @@ import { v4 as uuid } from 'uuid'
 import SkillComponent from './Components/SkillComponent'
 import Circuit from './Shared/Svgs/Circuit'
 import Link from './Shared/Svgs/Link'
+import WavyBackground from './Shared/Svgs/WavyBackground'
 gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(TextPlugin)
 
 const App = () => {
   const [isNightModeOn, setNightMode] = useState(false)
@@ -69,29 +73,24 @@ const App = () => {
     <div className="Home">
       <div className={nightModeClass("landingSection").concat(" section")}>
         {/* IMAGE THUMBNAIL */}
-        <div className="profileImageThumbnail centered">
+        {/* <div className="profileImageThumbnail centered">
           <div className={nightModeClass("profileImage")}></div>
           <div className="profileImageFlag">🇨🇭</div>
-        </div>
+        </div> */}
+        <WavyBackground classNameOne={nightModeClass("wavyDivider")} classNameTwo={nightModeClass("upperDivider")}  classNameThree={nightModeClass("thinkingCircles")}/>
+
         <p>HI THERE 👋🏻 I'M</p>
         <span>Cristian Hoza</span>
         <div className={nightModeClass("myProfession")}>full stack developer & <br /> web design enthusiast</div>
         <div className={nightModeClass("myProfessionDetailed")}>I’m a 20 y.o specialist Full Stack Developer<br />
           with growing UI/UX Skills,<br />
-          based in Switzerland.
+          based in Switzerland 🇨🇭
         </div>
-        <div className={nightModeClass("callToAction").concat(" centered")}>check my skills</div>
+        <div className={nightModeClass("callToAction")}>check my skills</div>
         <div className={nightModeClass("lightModeSwitch")} onClick={() => lightModeSwitchAnimationTrigger()}>
           <MoonSun isNight={isNightModeOn} className={"moonSun"} />
         </div>
       </div>
-
-
-
-
-
-
-
       <div className={nightModeClass("myWorkSection").concat(" section")}>
         <div className={nightModeClass("sectionTitle")}>
           <WebProgramming isNight={isNightModeOn} />
@@ -114,16 +113,6 @@ const App = () => {
           })}
         </div>
       </div>
-
-
-
-
-
-
-
-
-
-
       <div className={nightModeClass("skillsSection").concat(" section")}>
         <div className={nightModeClass("sectionTitle")}>
           <WebProgramming isNight={isNightModeOn} />
